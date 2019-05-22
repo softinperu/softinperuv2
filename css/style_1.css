@@ -1,0 +1,145 @@
+.img-width{
+    width: 30%
+}
+
+.position{
+    margin-top: 20%;
+    width: 80%;
+    margin-left: 10%
+}
+
+.margin-nav{
+    margin-left: 10%
+}
+
+.btn-primary{
+    font-weight: bolder
+}
+.button-center{
+    margin-left: 30%;
+    margin-top: 10%
+}
+
+.btn-enviar{
+    padding: 2%;
+    width: 60%
+}
+
+.navbar-color{
+    background: #fff
+}
+
+#header {
+    height: 80px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+}
+
+body{
+    background: #ecf5ff;
+}
+
+.footer-top{
+    margin-top: 12%;
+    background: #004a99;
+    padding: 60px 0 30px 0;
+}
+
+.footer-info p{
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #ecf5ff;
+}
+
+.footer-info h3{
+    font-size: 34px;
+    margin: 0 0 20px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.footer-top h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-contact p {
+    line-height: 26px;
+    color: #fff
+}
+
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#footer {
+    background: #00428a;
+    padding: 0 0 30px 0;
+    color: #eee;
+    font-size: 14px;
+}
+
+#footer .credits {
+    text-align: center;
+    font-size: 13px;
+    color: #f1f7ff;
+}
+
+.margin-row{
+    margin-top: 3%;
+    margin-bottom: 3%
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+  }
+
+  .important{
+      font-weight: bolder;
+      font-size: 75%
+  }
+@media only screen and (min-width: 600px){
+    .position{
+        margin-top: 10%;
+        width: 50%;
+        margin-left: 25%
+    }
+    .btn-enviar{
+        padding: 1%;
+        width: 30%
+    }
+    .button-center{
+        margin-left: 45%;
+        margin-top: 5%
+    }
+
+    .margin-check{
+        margin-top: 12%
+    }
+
+    .important{
+        font-size: 100%
+    }
+
+}
