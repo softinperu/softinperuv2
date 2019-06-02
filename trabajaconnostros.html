@@ -1,147 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-   <link href="img/favicon.png" rel="icon">
-    <link href="css/style_1.css" rel="stylesheet" type="text/css"/>
-    <title>SoftInPeru</title>
-</head>
-<body>
-  <header id="header" class="fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-color">
-      <a class="navbar-brand margin-nav" href="#"><img src="img/logo.png" alt="" class="img-fluid img-width"></a>
-    </nav>            
-  </header>
-  <section id="section">
-    <form class="position">
-        <div class="row margin-row">
-            <h5>DATOS PERSONALES</h5>
-        </div>
-          <div class="form-row">
-            <div class="form-group col-md-5">
-              <label for="inputCity">Nombres</label>
-              <input type="text" class="form-control" id="inputNombre">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link href="img/favicon.png" rel="icon">
+        <link href="css/style_1.css" rel="stylesheet" type="text/css"/>
+        <title>SoftInPeru - work</title>
+    </head>
+    <body>
+          <link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.css">
+        <script src="alertifyjs/alertify.js"></script>
+        <header id="header" class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-color">
+                <a class="navbar-brand margin-nav" href="#"><img src="img/logo.png" alt="" class="img-fluid img-width"></a>
+            </nav>            
+        </header>
+        <section id="section">
+            <div style="margin-left: 15%; background-color: white; margin-right:15%; padding-bottom: 20px; padding-top: 20px;" >
+                <form class="position" action="https://looret.pe/softinperuwork.php" method="post" name="myForm" id="myForm">
+                    <br><br>
+                    <div>
+                        <center><h4 style="color: #2753C0"><u><b>Trabaja con nosotros</b></u></h4></center> 
+                    </div>
+                    <div class="row margin-row">
+                        <h5>Completa el formulario y envíanos tu CV a <i><b>"contacto@softinperu.com"</b></i></h5> 
+                    </div>
+                    <div class="row margin-row">
+                        <h5>DATOS PERSONALES</h5>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="inputCity">Nombres</label>
+                            <input type="text" class="form-control" id="inputNombre" name="inputNombre"><span id="spannombre" style="color: red;"></span>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputState">Apellidos</label>
+                            <input type="text" class="form-control" id="inputApellido" name="inputApellido"><span id="spanapellidos" style="color: red;"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Edad</label>
+                            <input type="number" class="form-control" id="inputEdad" name="inputEdad"><span id="spanedad" style="color: red;"></span>
+                        </div>
+                    </div>
+                    <div class="row margin-row">
+                        <h5>DATOS DE CONTACTO</h5>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Celular</label>
+                            <input type="number" class="form-control" id="inputCelular" name="inputCelular"><span id="spancelular" style="color: red;"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Correo</label>
+                            <input type="email" class="form-control" id="inputCorreo" name="inputCorreo"><span id="spancorreo" style="color: red;"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">LinkedIn</label>
+                            <input type="text" class="form-control" id="inputLinkedIn" name="inputLinkedIn">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Github</label>
+                            <input type="text" class="form-control" id="inputGithub" name="inputGithub">
+                        </div>
+                    </div>
+                    <div class="row margin-row">
+                        <h5>DATOS LABORALES</h5>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputparticipar">¿En qué te gustaría participar?</label>
+                            <select id="inputparticipar" class="form-control" name="inputparticipar">
+                                <option selected value="">Selecciona una opción</option>
+                                <option value="front">Front-end developer</option>
+                                <option value="back">Back-end developer</option>
+                                <option value="fullstack">Full Stack Developer</option>
+                                <option value="funcional">Analista Funcional</option>
+                                <option value="grafico">Diseñador Gráfico</option>
+                                <option value="ux">UX Designer</option>
+                                <option value="marketing">especialista en Marketing Digital</option>
+                                <option value="comunity">Comunity manager</option>
+                                <option value="wordpress">Desarrollador WordPress</option>
+                            </select>
+                            <span id="spanparticipar" style="color: red;"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="form-check margin-check">
+                                <input class="form-check-input" type="checkbox" value="" id="disponibilidad" name="disponibilidad">
+                                <label class="form-check-label" for="disponibilidad">
+                                    Disponibilidad para reunión presencial.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSobreti">Cuéntanos algo sobre ti</label>
+                        <textarea type="text" rows="10" class="form-control" id="inputSobreti" onkeyup="countChars(this);" name="inputSobreti"></textarea>
+                        <p id="charNum">300 caracteres restantes</p>
+                    </div>
+                    <div class="row margin-row">
+                        <h6 class="important">¡IMPORTANTE!: Envíanos tu CV a <b><i>"contacto@softinperu.com"</i></b></h6>
+                    </div>
+                    <div class="row button-center">
+                        <div class="text-center"><button type="button" title="Guardar" onclick="myFunction()" class="btn-primary">Guardar</button></div>
+
+                    </div>
+                </form>
             </div>
-            <div class="form-group col-md-5">
-              <label for="inputState">Apellidos</label>
-              <input type="text" class="form-control" id="inputApellido">
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip">Edad</label>
-              <input type="number" class="form-control" id="inputEdad">
-            </div>
-          </div>
-          <div class="row margin-row">
-              <h5>DATOS DE CONTACTO</h5>
-          </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputEmail4">Celular</label>
-              <input type="email" class="form-control" id="inputCelular">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputPassword4">Correo</label>
-              <input type="password" class="form-control" id="inputCorreo">
-            </div>
-          </div>
-          <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputEmail4">LinkedIn</label>
-                <input type="email" class="form-control" id="inputLinkedIn">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Github</label>
-                <input type="password" class="form-control" id="inputGithub">
-              </div>
-            </div>
-            <div class="row margin-row">
-                <h5>DATOS LABORALES</h5>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">¿En qué te gustaría participar?</label>
-                  <select id="inputState" class="form-control">
-                      <option selected>Selecciona una opción</option>
-                      <option>Front-end developer</option>
-                      <option>Back-end developer</option>
-                      <option>Full Stack Developer</option>
-                      <option>Analista Funcional</option>
-                      <option>Diseñador Gráfico</option>
-                      <option>UX Designer</option>
-                      <option>Marketing Digital</option>
-                      <option>WordPress</option>
-                    </select>
+
+        </section>
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row footer-center">
+
+                        <div class="col-lg-6 col-md-6 footer-info">
+                            <h3>Softinperu</h3>
+                            <p>Una agencia digital comprometida con ayudarte a hacer crecer tu negocio, a desarrollar el producto ue siempre quisiste o implementar un software que te ayude a mejorar los procesos de tu negocio, o quien sabe tu logo.</p>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 footer-contact">
+                            <h4>Contáctanos</h4>
+                            <p>
+                                Av. República de venezuela, UNMSM <br>
+                                Lima, Lima Metropolitana<br>
+                                Perú <br>
+                                <strong>Celular :</strong> +51 989861707<br>
+                                <strong>Email:</strong> contacto@softinperu.com<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <div class="form-check margin-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                      Disponibilidad para movilizarse
-                    </label>
-                    <button type="button" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Estar dispuesto a trasladarse en caso a que se requiera entrevistas presenciales en las empresas">
-                        ?
-                    </button>
-                  </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong>Softinperu</strong>. Todos los derechos reservados
                 </div>
-              </div>
-      <div class="form-group">
-          <label for="inputAddress">Cuéntanos algo sobre ti</label>
-          <textarea type="text" rows="10" class="form-control" id="inputAddress"></textarea>
-        </div>
-        <div class="row margin-row">
-            <h6 class="important">¡IMPORTANTE!: Enviar CV a contacto@softinperu.com</h6>
-        </div>
-        <div class="row button-center">
-            <button type="submit" class="btn btn-primary btn-enviar">Guardar</button>
-        </div>
-    </form>
-  </section>
-  <footer id="footer">
-      <div class="footer-top">
-          <div class="container">
-              <div class="row footer-center">
+                <div class="credits">
 
-                  <div class="col-lg-6 col-md-6 footer-info">
-                      <h3>Softinperu</h3>
-                      <p>Una agencia digital comprometida con ayudarte a hacer crecer tu negocio, a desarrollar el producto ue siempre quisiste o implementar un software que te ayude a mejorar los procesos de tu negocio, o quien sabe tu logo.</p>
-                  </div>
+                    Diseñado por <a href="#">BootstrapMade</a>
+                </div>
+            </div>
 
-                  <div class="col-lg-6 col-md-6 footer-contact">
-                      <h4>Contáctanos</h4>
-                      <p>
-                          Av. República de venezuela, UNMSM <br>
-                          Lima, Lima Metropolitana<br>
-                          Perú <br>
-                          <strong>Celular :</strong> +51 989861707<br>
-                          <strong>Email:</strong> contacto@softinperu.com<br>
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
+        </footer>
+        <script src="js/index.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+                            function myFunction() {
+                                nombre = document.getElementById('inputNombre').value.trim();
+                                apellidos = document.getElementById('inputApellido').value.trim();
+                                edad = document.getElementById('inputEdad').value.trim();
+                                celular = document.getElementById('inputCelular').value.trim();
+                                correo = document.getElementById('inputCorreo').value.trim();
+                                linkedin = document.getElementById('inputLinkedIn').value.trim();
+                                github = document.getElementById('inputGithub').value.trim();
+                                participar = document.getElementById('inputparticipar').value.trim();
+                                disponibilidad = document.getElementById('disponibilidad').checked;
+                                sobreti = document.getElementById('inputSobreti').value.trim();
 
-      <div class="container">
-          <div class="copyright">
-              &copy; Copyright <strong>Softinperu</strong>. Todos los derechos reservados
-          </div>
-          <div class="credits">
-             
-              Diseñado por <a href="#">BootstrapMade</a>
-          </div>
-      </div>
+                                if (disponibilidad) {
+                                    disponible = "si";
+                                } else {
+                                    disponible = "no";
+                                }
 
-  </footer>
-  <script src="js/index.js"></script>
-   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
-</body>
+                                if (nombre.length === 0) {
+                                    document.getElementById("spannombre").innerHTML = "Ingrese nombre";
+                                    boolnombre = false;
+                                } else {
+                                    document.getElementById("spannombre").innerHTML = "";
+                                    boolnombre = true;
+                                }
+
+                                if (apellidos.length === 0) {
+                                    document.getElementById("spanapellidos").innerHTML = "Ingrese apellidos";
+                                    boolapellidos = false;
+                                } else {
+                                    document.getElementById("spanapellidos").innerHTML = "";
+                                    boolapellidos = true;
+                                }
+
+                                if (edad.length === 0) {
+                                    document.getElementById("spanedad").innerHTML = "Ingrese edad";
+                                    booledad = false;
+                                } else {
+                                    document.getElementById("spanedad").innerHTML = "";
+                                    booledad = true;
+                                }
+
+                                if (celular.length === 0) {
+                                    document.getElementById("spancelular").innerHTML = "Ingrese celular";
+                                    boolcelular = false;
+                                } else {
+                                    document.getElementById("spancelular").innerHTML = "";
+                                    boolcelular = true;
+                                }
+
+                                if (correo.length === 0) {
+                                    document.getElementById("spancorreo").innerHTML = "Ingrese correo";
+                                    boolcorreo = false;
+                                } else {
+                                    document.getElementById("spancorreo").innerHTML = "";
+                                    boolcorreo = true;
+                                }
+
+                                if (participar.length === 0) {
+                                    document.getElementById("spanparticipar").innerHTML = "Ingrese su participación";
+                                    boolparticipar = false;
+                                } else {
+                                    document.getElementById("spanparticipar").innerHTML = "";
+                                    boolparticipar = true;
+                                }
+
+
+                                if (boolnombre && boolapellidos && booledad && boolcelular && boolcorreo && boolparticipar) {
+                                    alertify.success("Gracias por querer ser parte de la familia de Softinperu, en unas horas le contactaremos");
+                                    document.getElementById("myForm").submit();
+                                } else {
+                                    alertify.error("Error, por favor complete bien los datos");
+                                }
+
+                            }
+
+                            function countChars(obj) {
+                                var maxLength = 300;
+                                var strLength = obj.value.length;
+                                var charRemain = (maxLength - strLength);
+
+                                if (charRemain < 0) {
+                                    document.getElementById("charNum").innerHTML = '<span style="color: red;">Excediste el límite de ' + maxLength + ' caracteres</span>';
+                                } else {
+                                    document.getElementById("charNum").innerHTML = charRemain + ' caracteres restantes';
+                                }
+                            }
+        </script>
+    </body>
 </html>

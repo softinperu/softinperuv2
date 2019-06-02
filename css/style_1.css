@@ -3,7 +3,7 @@
 }
 
 .position{
-    margin-top: 20%;
+    margin-top: 10%;
     width: 80%;
     margin-left: 10%
 }
@@ -122,8 +122,8 @@ body{
 @media only screen and (min-width: 600px){
     .position{
         margin-top: 10%;
-        width: 50%;
-        margin-left: 25%
+        width: 80%;
+        margin-left: 10%
     }
     .btn-enviar{
         padding: 1%;
