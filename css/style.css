@@ -125,18 +125,18 @@ h6 {
 --------------------------------------------------------------*/
 
 #header {
-  height: 80px;
+  height: 90px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  padding: 20px 0;
+  padding: 0px 0;
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 
 #header.header-scrolled,
 #header.header-pages {
-  height: 60px;
+  height: 90px;
   padding: 10px 0;
 }
 
@@ -159,7 +159,7 @@ h6 {
 #header .logo img {
   padding: 0;
   margin: 3px 0;
-  max-height: 35px;
+  max-height: 75px;
 }
 
 .main-pages {
